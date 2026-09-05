@@ -26,10 +26,9 @@
     --transition-fast: 0.2s ease;
 }
 
-
-/* ------------
+/* ----------------
    UNIVERSAL
------------- */
+---------------- */
 
 * {
     margin: 0;
@@ -37,20 +36,18 @@
     box-sizing: border-box;
 }
 
-
-/* -------------
+/* ----------------
    HTML
-------------- */
+---------------- */
 
 html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
-
-/* -------------
+/* ----------------
    BODY
-------------- */
+---------------- */
 
 body {
     min-height: 100vh;
@@ -59,7 +56,6 @@ body {
     font-family: var(--font-primary);
     line-height: 1.5;
 }
-
 
 /* -------------------------
    PASSWORD GENERATOR
@@ -72,7 +68,6 @@ body {
     align-items: center;
     padding: 24px;
 }
-
 
 /* -------------------------
    GENERATOR CONTAINER
@@ -90,7 +85,6 @@ body {
     border-radius: var(--radius-large);
 }
 
-
 /* ----------------
    GENERATOR TEXT
 ---------------- */
@@ -101,7 +95,6 @@ body {
     margin-bottom: 32px;
 }
 
-
 /* ----------------
    GENERATOR TITLE
 ---------------- */
@@ -110,7 +103,6 @@ body {
     margin-bottom: 8px;
 }
 
-
 /* ----------------------
    GENERATOR DESCRIPTION
 ---------------------- */
@@ -118,7 +110,6 @@ body {
 .generator_description {
     color: var(--color-text-secondary);
 }
-
 
 /* -----------------
    PASSWORD OUTPUT
@@ -129,7 +120,6 @@ body {
     margin-bottom: 24px;
 }
 
-
 /* ----------------
    PASSWORD FIELD
 ---------------- */
@@ -137,7 +127,6 @@ body {
 .password_field {
     width: 100%;
 }
-
 
 /* ----------------
    PASSWORD INPUT
@@ -164,7 +153,6 @@ body {
     border-color: var(--color-primary);
 }
 
-
 /* ---------------------
    GENERATOR SETTINGS
 --------------------- */
@@ -177,7 +165,6 @@ body {
     margin-bottom: 24px;
 }
 
-
 /* ---------------
    SETTING
 --------------- */
@@ -189,7 +176,6 @@ body {
     justify-content: space-between;
 }
 
-
 /* ----------------
    SETTING LABEL
 ---------------- */
@@ -199,7 +185,6 @@ body {
     font-size: 0.95rem;
     font-weight: 500;
 }
-
 
 /* --------------------
    LENGTH INPUT
@@ -222,7 +207,6 @@ body {
 #password_length:focus {
     border-color: var(--color-primary);
 }
-
 
 /* -------------------
    CHARACTER SETTINGS
@@ -251,7 +235,6 @@ body {
     transition: var(--transition-fast);
 }
 
-
 /* ----------------
    CHECKBOX CHECK
 ---------------- */
@@ -267,7 +250,6 @@ body {
     font-weight: bold;
     opacity: 1;
 }
-
 
 /* ----------------
    CHECKBOX CHECKED
@@ -290,7 +272,6 @@ body {
     width: 100%;
     display: flex;
     gap: 12px;
-    transition: var(--transition-fast);
 }
 
 /* ----------------
@@ -311,9 +292,8 @@ body {
 }
 
 #generate:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
 }
-
 
 /* ----------------
    COPY BUTTON
@@ -345,7 +325,6 @@ body {
     margin-bottom: 24px;
 }
 
-
 /* ----------------
    STRENGTH TEXT
 ---------------- */
@@ -358,7 +337,6 @@ body {
     font-size: 0.9rem;
 }
 
-
 /* ----------------
    STRENGTH VALUE
 ---------------- */
@@ -367,7 +345,6 @@ body {
     color: var(--color-text-secondary);
     font-weight: 600;
 }
-
 
 /* ----------------
    STRENGTH BAR
@@ -380,7 +357,6 @@ body {
     border-radius: 10px;
     overflow: hidden;
 }
-
 
 /* ----------------
    STRENGTH PROGRESS
@@ -421,4 +397,28 @@ body {
     transform: translateY(20px);
     pointer-events: none;
     transition: var(--transition-fast);
+}
+
+/* ----------------
+   RESPONSIVE
+---------------- */
+
+@media (width < 600px) {
+    .password_generator {
+        padding: 16px;
+    }
+
+    .password_generator_container {
+        padding: 24px;
+    }
+
+    .generator_text {
+        margin-bottom: 24px;
+    }
+
+    .alerts {
+        right: 16px;
+        bottom: 16px;
+        left: 16px;
+    }
 }
