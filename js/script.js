@@ -167,6 +167,7 @@ copyButton.addEventListener("click", async () => {
 
 const initialPassword = generatePassword();
 
-passwordInput.value = initialPassword;
-
-updatePasswordStrength(initialPassword);
+if (initialPassword) {
+    passwordInput.value = initialPassword;
+    updatePasswordStrength(initialPassword);
+}
