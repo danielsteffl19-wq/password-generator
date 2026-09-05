@@ -1,0 +1,56 @@
+/* ----------------
+   ROOT
+---------------- */
+
+:root {
+    /* Colors */
+    --color-background: #ffffff;
+    --color-surface: #feffff;
+    --color-surface-light: #ffffff;
+
+    --color-primary: #6c63ff;
+    --color-primary-hover: #5a52e8;
+
+    --color-text: #000000;
+    --color-text-secondary: #a5a7b4;
+    --color-border: #2a2e3a;
+
+    /* Typography */
+    --font-primary: Arial, sans-serif;
+
+    /* Border radius */
+    --radius-small: 8px;
+    --radius-medium: 12px;
+    --radius-large: 16px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+}
+/* ------------
+   UNIVERSAL
+------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* -------------
+   HTML
+------------- */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+/* -------------
+   BODY
+------------- */
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    line-height: 1.5;
+}

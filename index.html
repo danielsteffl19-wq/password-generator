@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and secure password generator built with HTML, CSS and JavaScript.">
+    <meta name="author" content="Daniel Šteffl">
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <section class="password_generator">
+            <div class="password_generator_container">
+                <div class="generator_text">
+                    <div class="generator_title">
+                        <h1>Password Generator</h1>
+                    </div>
+                    <div class="generator_description">
+                        <p>Generate a secure password in seconds</p>
+                    </div>
+                </div>
+                <!-- Generated password -->
+                <div class="password_output">
+
+                    <div class="password_field">
+                        <input 
+                            type="text" 
+                            id="password"
+                            placeholder="Your password"
+                            readonly
+                        >
+                    </div>
+
+                    <button id="copy_button" type="button">Copy</button>
+                </div>
+                 <!-- Generator settings -->
+                <div class="generator_settings">
+                    <!-- Password length -->
+                    <div class="setting">
+                        <label for="password_length">
+                            Password Length
+                        </label>
+
+                        <input 
+                            type="number"
+                            id="password_length"
+                            min="4"
+                            max="64"
+                            value="16"
+                        >
+                    </div>
+
+                    <!-- Uppercase letters -->
+                    <div class="setting">
+                        <label for="uppercase">
+                            Uppercase Letters
+                        </label>
+                        <input 
+                            type="checkbox"
+                            id="uppercase"
+                            checked
+                        >
+                    </div>
+
+                    <!-- Lowercase letters -->
+                    <div class="setting">
+                        <label for="lowercase">
+                            Lowercase Letters
+                        </label>
+                        <input 
+                            type="checkbox"
+                            id="lowercase"
+                            checked
+                        >
+                    </div>
+
+                    <!-- Numbers -->
+                    <div class="setting">
+                        <label for="numbers">
+                            Numbers
+                        </label>
+                        <input 
+                            type="checkbox"
+                            id="numbers"
+                            checked
+                        >
+                    </div>
+
+                    <!-- Symbols -->
+                    <div class="setting">
+                        <label for="symbols">
+                            Symbols
+                        </label>
+                        <input 
+                            type="checkbox"
+                            id="symbols"
+                            checked
+                        >
+                    </div>
+                </div>
+
+                <!-- Password strength -->
+                <div class="password_strength">
+
+                    <div class="strength_text">
+                        <span>Password Strength</span>
+                        <span id="strength_value">Strong</span>
+                    </div>
+
+                    <div class="strength_bar">
+                        <div id="strength_progress"></div>
+                    </div>
+
+                </div>
+
+                <!-- Generate button -->
+                <div class="generate_button">
+
+                    <button id="generate" type="button">
+                        Generate Password
+                    </button>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
