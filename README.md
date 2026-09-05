@@ -4,6 +4,10 @@ A simple and secure password generator built with HTML, CSS and JavaScript.
 
 Generate customizable passwords with different character types, password length and password strength feedback.
 
+## Live Demo
+
+[Open Password Generator](https://danielsteffl19-wq.github.io/password-generator/)
+
 ## Screenshot
 
 <img width="900" alt="Screenshot of the Password Generator interface." src="https://github.com/user-attachments/assets/d82bc575-0387-48c1-ab22-f428c7971f6e" />
