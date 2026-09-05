@@ -135,6 +135,10 @@ function updatePasswordStrength(password) {
 generateButton.addEventListener("click", () => {
     const password = generatePassword();
 
+    if (!password) {
+        return;
+    }
+
     passwordInput.value = password;
     updatePasswordStrength(password);
 });
