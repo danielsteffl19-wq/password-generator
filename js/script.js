@@ -53,8 +53,8 @@ function generatePassword() {
     const length = Number(passwordLength.value);
     const characterSet = getCharacterSet();
 
-    if (length < 4 || length > 64) {
-    showErrorAlert("Password length must be between 4 and 64.");
+    if (!Number.isInteger(length) || length < 4 || length > 64) {
+    showErrorAlert("Password length must be an integer between 4 and 64.");
     return "";
 }
 
@@ -146,6 +146,11 @@ generateButton.addEventListener("click", () => {
 copyButton.addEventListener("click", async () => {
     const password = passwordInput.value;
 
+    if (!password) {
+        showErrorAlert("There is no password to copy.");
+        return;
+    }
+
     try {
         await navigator.clipboard.writeText(password);
 
@@ -158,7 +163,6 @@ copyButton.addEventListener("click", async () => {
             copyButton.style.backgroundColor = "";
             copyButton.style.color = "";
         }, 1500);
-
     } catch (error) {
         showErrorAlert("Unable to copy password.");
     }
