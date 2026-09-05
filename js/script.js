@@ -8,6 +8,8 @@ const symbols = document.getElementById("symbols");
 const generateButton = document.getElementById("generate");
 const copyButton = document.getElementById("copy_button");
 
+const copyAlert = document.getElementById("copy_alert");
+
 const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
 const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numberChars = "0123456789";
@@ -48,7 +50,18 @@ function generatePassword() {
     const length = Number(passwordLength.value);
     const characterSet = getCharacterSet();
 
+    if (length < 4 || length > 64) {
+    alert("Password length must be between 4 and 64.");
+    return "";
+}
+
+    if (characterSet.length === 0) {
+        alert("Select at least one character type.");
+        return "";
+    }
+
     let password = "";
+
     for (let i = 0; i < length; i++) {
         password += getRandomCharacter(characterSet);
     }
@@ -69,4 +82,16 @@ copyButton.addEventListener("click", () => {
     copyButton.textContent = "Copied!";
     copyButton.style.backgroundColor = "var(--color-primary)";
     copyButton.style.color = "var(--color-surface)";
+
+    copyAlert.style.opacity = "1";
+    copyAlert.style.transform = "translateY(0)";
+
+    setTimeout(() => {
+        copyButton.textContent = "Copy";
+        copyButton.style.backgroundColor = "";
+        copyButton.style.color = "";
+
+        copyAlert.style.opacity = "0";
+        copyAlert.style.transform = "translateY(20px)";
+    }, 1500);
 });
