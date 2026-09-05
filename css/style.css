@@ -387,7 +387,7 @@ body {
 ---------------- */
 
 #strength_progress {
-    width: 75%;
+    width: 0%;
     height: 100%;
     background-color: var(--color-primary);
     border-radius: 10px;
@@ -395,13 +395,21 @@ body {
 }
 
 /* ----------------
-   COPY ALERT
+   ALERTS
 ---------------- */
 
-#copy_alert {
+.alerts {
     position: fixed;
     right: 24px;
     bottom: 24px;
+    z-index: 1000;
+}
+
+/* ----------------
+   ERROR ALERT
+---------------- */
+
+#error_alert {
     padding: 12px 18px;
     background-color: var(--color-surface);
     color: var(--color-text);
