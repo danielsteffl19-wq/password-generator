@@ -49,6 +49,25 @@ function getRandomCharacter(characterSet) {
     return characterSet[randomIndex];
 }
 
+function shufflePassword(password) {
+    const characters = password.split("");
+
+    for (let i = characters.length - 1; i > 0; i--) {
+        const randomValue = new Uint32Array(1);
+
+        crypto.getRandomValues(randomValue);
+
+        const randomIndex = randomValue[0] % (i + 1);
+
+        [characters[i], characters[randomIndex]] = [
+            characters[randomIndex],
+            characters[i]
+        ];
+    }
+
+    return characters.join("");
+}
+
 function generatePassword() {
     const length = Number(passwordLength.value);
     const characterSet = getCharacterSet();
@@ -65,11 +84,26 @@ function generatePassword() {
     
     let password = "";
 
-    for (let i = 0; i < length; i++) {
-        password += getRandomCharacter(characterSet);
+    if (lowercase.checked) {
+        password += getRandomCharacter(lowercaseChars);
     }
 
-    return password;
+    if (uppercase.checked) {
+        password += getRandomCharacter(uppercaseChars);
+    }
+
+    if (numbers.checked) {
+        password += getRandomCharacter(numberChars);
+    }
+
+    if (symbols.checked) {
+        password += getRandomCharacter(symbolChars);
+    }
+
+    while (password.length < length) {
+        password += getRandomCharacter(characterSet);
+    }
+    return shufflePassword(password);
 }
 
 function getPasswordStrength(password) {
