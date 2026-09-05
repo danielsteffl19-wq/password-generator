@@ -32,12 +32,9 @@
                             readonly
                         >
                     </div>
-
-                    <button id="copy_button" type="button">Copy</button>
                 </div>
-                 <!-- Generator settings -->
                 <div class="generator_settings">
-                    <!-- Password length -->
+
                     <div class="setting">
                         <label for="password_length">
                             Password Length
@@ -52,53 +49,31 @@
                         >
                     </div>
 
-                    <!-- Uppercase letters -->
-                    <div class="setting">
-                        <label for="uppercase">
-                            Uppercase Letters
-                        </label>
-                        <input 
-                            type="checkbox"
-                            id="uppercase"
-                            checked
-                        >
+
+                    <div class="character_settings">
+
+                        <div class="setting">
+                            <label for="uppercase">Uppercase</label>
+                            <input type="checkbox" id="uppercase" checked>
+                        </div>
+
+                        <div class="setting">
+                            <label for="lowercase">Lowercase</label>
+                            <input type="checkbox" id="lowercase" checked>
+                        </div>
+
+                        <div class="setting">
+                            <label for="numbers">Numbers</label>
+                            <input type="checkbox" id="numbers" checked>
+                        </div>
+
+                        <div class="setting">
+                            <label for="symbols">Symbols</label>
+                            <input type="checkbox" id="symbols" checked>
+                        </div>
+
                     </div>
 
-                    <!-- Lowercase letters -->
-                    <div class="setting">
-                        <label for="lowercase">
-                            Lowercase Letters
-                        </label>
-                        <input 
-                            type="checkbox"
-                            id="lowercase"
-                            checked
-                        >
-                    </div>
-
-                    <!-- Numbers -->
-                    <div class="setting">
-                        <label for="numbers">
-                            Numbers
-                        </label>
-                        <input 
-                            type="checkbox"
-                            id="numbers"
-                            checked
-                        >
-                    </div>
-
-                    <!-- Symbols -->
-                    <div class="setting">
-                        <label for="symbols">
-                            Symbols
-                        </label>
-                        <input 
-                            type="checkbox"
-                            id="symbols"
-                            checked
-                        >
-                    </div>
                 </div>
 
                 <!-- Password strength -->
@@ -116,11 +91,11 @@
                 </div>
 
                 <!-- Generate button -->
-                <div class="generate_button">
+                <div class="buttons">
 
-                    <button id="generate" type="button">
-                        Generate Password
-                    </button>
+                    <button id="generate" type="button">Generate Password</button>
+
+                    <button id="copy_button" type="button">Copy</button>
 
                 </div>
             </div>
